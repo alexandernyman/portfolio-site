@@ -1,0 +1,134 @@
+/* Globals */
+html {
+    box-sizing: border-box;
+    padding: 0;
+}
+textarea{
+    resize: none;
+}
+
+/* Navigation */
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+}
+    .nav-ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+    }
+        .nav-li{
+            padding: 35px;
+            display: grid;
+        }
+            .nav-link{
+                font-family: var(--second-font);
+                font-weight: var(--font-700);
+                text-decoration: none;
+                color: var(--main-text-color);
+                transition: 0.20s;
+            }
+            .nav-link:hover{
+                opacity: 0.7;
+            }
+
+@media (max-width: 1024px){
+    .nav-ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Banners (bild) (Tror dock parallax-effekten bara funkar i web-view men kan ha fel), använde mig av länkningen till bilden i css istället för html pga att det var det enda sättet jag lyckades få till parallax effekten på :) */
+
+.banner-index{
+  background-image: url("../assets/ME.jpeg");
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+.banner-exp{
+    width: 100%;
+    height: 400px;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+    .banner-title{
+        font-family: var(--main-font);
+        color: var(--banner-color);
+        font-size: 35px;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+
+    }
+
+/* Footer */
+
+.footer{
+    background-color: var(--main-bg-color);
+    font-family: var(--second-font);
+    color: #fff;
+    padding: 100px;
+    margin-top: 50px;
+}
+    .footer-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+        .footer-ul{
+            padding: 0;
+        }    
+            .footer-list{
+                list-style-type: none;
+                padding: 10px;
+            }
+                .footer-link{
+                    text-decoration: none;
+                    color: #fff;
+                }
+        .footer-newsletter{
+            padding: 10px;
+        }
+            .footer-input{
+                padding: 5px;
+            }
+            .footer-button {
+                margin-top: 20px;  
+                background-color: var(--banner-color); 
+                padding: 5px;
+                font-size: 0.75rem;
+                font-weight: var(--font-400);
+                font-family: var(--second-font);
+                cursor: pointer;
+                transition: 0.20s ease-out;
+            }
+                .footer-button:hover{
+                    opacity: 0.7;
+                    box-shadow: 1px 2px;
+                }
+@media (max-width: 1024px){
+    .footer{
+        padding: 50px 20px;
+    }
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+     
+/* Active */
+.active{
+    text-decoration: underline;
+}

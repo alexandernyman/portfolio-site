@@ -1,0 +1,53 @@
+@import 'layouts.css';
+@import 'variables.css';
+
+.content-exp{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+    .content-cell{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 25px;
+        align-items: center;
+    }
+        .cell-text{
+            padding: 20px;
+            font-family: var(--main-font);
+            text-align: center;
+        }
+        .cell-button{
+            padding: 10px 15px;
+            background-color: var(--second-bg-color);
+            cursor: pointer;
+            border: thin solid black;
+            box-shadow: 4px 2px black;
+            transition: 0.25s ease-in;
+            font-family: var(--main-font);
+
+        }
+            .cell-button:hover{
+                box-shadow: 2px 2px black;
+            }
+        .cell-img{
+            padding: 20px;
+            object-fit: cover;
+        }
+            .cell-img-pic{
+                width: 100%;
+            }
+@media (max-width: 1024px){
+    .content-cell{
+        grid-template-columns: 1fr;
+        padding: 20px 100px;
+    }
+}
+@media (max-width: 500px){
+    .content-cell{
+        padding: 20px 20px;
+    }
+}
